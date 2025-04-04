@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ciclo de Vida de las Plantas - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/leccion.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="leccion-container">
+        <header class="leccion-header">
+            <h1>El Ciclo de Vida de las Plantas</h1>
+            <div class="leccion-progreso">
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 0%"></div>
+                </div>
+                <span>0% Completado</span>
+            </div>
+        </header>
+
+        <div class="leccion-content">
+            <section class="explicacion">
+                <h2>¿Cómo crecen las plantas?</h2>
+                <p>Las plantas tienen un ciclo de vida fascinante que comienza desde una pequeña semilla y termina con la producción de nuevas semillas. Este proceso se repite una y otra vez.</p>
+                
+                <h2>Etapas del ciclo de vida</h2>
+                <ul>
+                    <li><strong>Semilla:</strong> Es el inicio de una nueva planta. Contiene todo lo necesario para comenzar a crecer.</li>
+                    <li><strong>Germinación:</strong> La semilla absorbe agua y comienza a crecer, desarrollando raíces y un pequeño tallo.</li>
+                    <li><strong>Crecimiento:</strong> La planta crece y desarrolla hojas para hacer la fotosíntesis.</li>
+                    <li><strong>Reproducción:</strong> La planta produce flores que se convierten en frutos con nuevas semillas.</li>
+                </ul>
+            </section>
+
+            <section class="ejercicio" id="ejercicio1">
+                <h3>Ejercicio 1: Ordena el ciclo de vida</h3>
+                <div class="ciclo-vida-container">
+                    <div class="etapas-desordenadas">
+                        <div class="etapa" draggable="true" data-etapa="semilla">
+                            <img src="../../assets/images/semilla.png" alt="Semilla">
+                            <span>Semilla</span>
+                        </div>
+                        <div class="etapa" draggable="true" data-etapa="germinacion">
+                            <img src="../../assets/images/germinacion.png" alt="Germinación">
+                            <span>Germinación</span>
+                        </div>
+                        <div class="etapa" draggable="true" data-etapa="crecimiento">
+                            <img src="../../assets/images/crecimiento.png" alt="Crecimiento">
+                            <span>Crecimiento</span>
+                        </div>
+                        <div class="etapa" draggable="true" data-etapa="reproduccion">
+                            <img src="../../assets/images/reproduccion.png" alt="Reproducción">
+                            <span>Reproducción</span>
+                        </div>
+                    </div>
+                    <div class="etapas-ordenadas">
+                        <div class="zona-etapa" data-etapa="semilla">
+                            <h4>1. Semilla</h4>
+                            <div class="zona-contenido"></div>
+                        </div>
+                        <div class="zona-etapa" data-etapa="germinacion">
+                            <h4>2. Germinación</h4>
+                            <div class="zona-contenido"></div>
+                        </div>
+                        <div class="zona-etapa" data-etapa="crecimiento">
+                            <h4>3. Crecimiento</h4>
+                            <div class="zona-contenido"></div>
+                        </div>
+                        <div class="zona-etapa" data-etapa="reproduccion">
+                            <h4>4. Reproducción</h4>
+                            <div class="zona-contenido"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio2">
+                <h3>Ejercicio 2: Partes de la flor</h3>
+                <div class="flor-diagrama">
+                    <img src="../../assets/images/flor-diagrama.png" alt="Diagrama de una flor">
+                    <div class="parte-flor" data-parte="petalos" style="top: 30%; left: 50%;">
+                        <div class="punto"></div>
+                        <div class="etiqueta">Pétalos</div>
+                    </div>
+                    <div class="parte-flor" data-parte="estambres" style="top: 50%; left: 50%;">
+                        <div class="punto"></div>
+                        <div class="etiqueta">Estambres</div>
+                    </div>
+                    <div class="parte-flor" data-parte="pistilo" style="top: 70%; left: 50%;">
+                        <div class="punto"></div>
+                        <div class="etiqueta">Pistilo</div>
+                    </div>
+                    <div class="parte-flor" data-parte="sepalo" style="top: 90%; left: 50%;">
+                        <div class="punto"></div>
+                        <div class="etiqueta">Sépalos</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio3">
+                <h3>Ejercicio 3: Polinización</h3>
+                <div class="polinizacion-container">
+                    <div class="polinizadores-grid">
+                        <div class="polinizador" draggable="true" data-tipo="abeja">
+                            <img src="../../assets/images/abeja.png" alt="Abeja">
+                            <span>Abeja</span>
+                        </div>
+                        <div class="polinizador" draggable="true" data-tipo="mariposa">
+                            <img src="../../assets/images/mariposa.png" alt="Mariposa">
+                            <span>Mariposa</span>
+                        </div>
+                        <div class="polinizador" draggable="true" data-tipo="viento">
+                            <img src="../../assets/images/viento.png" alt="Viento">
+                            <span>Viento</span>
+                        </div>
+                    </div>
+                    <div class="flor-polinizacion">
+                        <img src="../../assets/images/flor-polinizacion.png" alt="Flor para polinización">
+                        <div class="zona-polinizacion"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="leccion-navegacion">
+                <button class="btn-prev" onclick="window.location.href='leccion3.html'">Lección Anterior</button>
+                <button class="btn-next" onclick="window.location.href='leccion5.html'">Siguiente Lección</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/leccion.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('../../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

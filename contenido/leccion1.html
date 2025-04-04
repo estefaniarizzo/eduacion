@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números del 1 al 10 - Matemáticas Divertidas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/leccion.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="leccion-container">
+        <header class="leccion-header">
+            <nav class="breadcrumb">
+                <a href="../cursos.html">Matemáticas Divertidas</a> &gt; 
+                <span>Lección 1: Números del 1 al 10</span>
+            </nav>
+            <h1>Números del 1 al 10</h1>
+        </header>
+
+        <div class="leccion-content">
+            <section class="teoria-section">
+                <h2>¡Vamos a aprender los números!</h2>
+                <div class="numeros-grid">
+                    <!-- Los números se cargarán dinámicamente -->
+                </div>
+            </section>
+
+            <section class="ejercicios-section">
+                <h2>¡Practica lo aprendido!</h2>
+                <div class="ejercicio">
+                    <h3>Ejercicio 1: ¿Qué número es?</h3>
+                    <div class="ejercicio-content">
+                        <div class="numero-display">
+                            <!-- El número se mostrará aquí -->
+                        </div>
+                        <div class="opciones">
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </div>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="ejercicio">
+                    <h3>Ejercicio 2: Ordena los números</h3>
+                    <div class="ejercicio-content">
+                        <div class="numeros-desordenados">
+                            <!-- Los números desordenados se cargarán aquí -->
+                        </div>
+                        <div class="numeros-ordenados">
+                            <!-- Aquí el estudiante ordenará los números -->
+                        </div>
+                    </div>
+                    <div class="feedback"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="leccion-navigation">
+            <button class="btn" id="anterior-btn" disabled>Anterior</button>
+            <button class="btn primary" id="siguiente-btn">Siguiente Lección</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+    <script src="../js/leccion1.js"></script>
+</body>
+</html> 

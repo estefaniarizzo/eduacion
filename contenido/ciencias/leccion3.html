@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Plantas - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/leccion.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="leccion-container">
+        <header class="leccion-header">
+            <h1>Las Plantas</h1>
+            <div class="leccion-progreso">
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 0%"></div>
+                </div>
+                <span>0% Completado</span>
+            </div>
+        </header>
+
+        <div class="leccion-content">
+            <section class="explicacion">
+                <h2>¿Qué son las plantas?</h2>
+                <p>Las plantas son seres vivos que crecen en la tierra y son muy importantes para nuestro planeta. Son los únicos seres vivos que pueden producir su propio alimento a través de la fotosíntesis.</p>
+                
+                <h2>Partes de una planta</h2>
+                <ul>
+                    <li><strong>Raíces:</strong> Son como los pies de la planta, la mantienen fija en la tierra y absorben agua y nutrientes.</li>
+                    <li><strong>Tallo:</strong> Es como el cuerpo de la planta, sostiene las hojas y transporta agua y nutrientes.</li>
+                    <li><strong>Hojas:</strong> Son como los pulmones de la planta, capturan la luz del sol para hacer la fotosíntesis.</li>
+                    <li><strong>Flores:</strong> Son los órganos reproductivos de la planta, producen semillas para crear nuevas plantas.</li>
+                </ul>
+            </section>
+
+            <section class="ejercicio" id="ejercicio1">
+                <h3>Ejercicio 1: Identifica las partes de la planta</h3>
+                <div class="partes-planta">
+                    <div class="planta-diagrama">
+                        <img src="../../assets/images/planta-diagrama.png" alt="Diagrama de una planta">
+                        <div class="parte-planta" data-parte="raiz" style="top: 90%; left: 50%;">
+                            <div class="punto"></div>
+                            <div class="etiqueta">Raíces</div>
+                        </div>
+                        <div class="parte-planta" data-parte="tallo" style="top: 60%; left: 50%;">
+                            <div class="punto"></div>
+                            <div class="etiqueta">Tallo</div>
+                        </div>
+                        <div class="parte-planta" data-parte="hojas" style="top: 40%; left: 30%;">
+                            <div class="punto"></div>
+                            <div class="etiqueta">Hojas</div>
+                        </div>
+                        <div class="parte-planta" data-parte="flor" style="top: 20%; left: 50%;">
+                            <div class="punto"></div>
+                            <div class="etiqueta">Flor</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio2">
+                <h3>Ejercicio 2: Tipos de plantas</h3>
+                <div class="clasificacion-grid">
+                    <div class="ser-vivo" draggable="true" data-tipo="arbol">
+                        <img src="../../assets/images/arbol.png" alt="Árbol">
+                        <span>Árbol</span>
+                    </div>
+                    <div class="ser-vivo" draggable="true" data-tipo="arbusto">
+                        <img src="../../assets/images/arbusto.png" alt="Arbusto">
+                        <span>Arbusto</span>
+                    </div>
+                    <div class="ser-vivo" draggable="true" data-tipo="hierba">
+                        <img src="../../assets/images/hierba.png" alt="Hierba">
+                        <span>Hierba</span>
+                    </div>
+                </div>
+                <div class="zonas-clasificacion">
+                    <div class="zona" data-tipo="arbol">
+                        <h4>Árboles</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-tipo="arbusto">
+                        <h4>Arbustos</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-tipo="hierba">
+                        <h4>Hierbas</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio3">
+                <h3>Ejercicio 3: ¿Qué necesitan las plantas?</h3>
+                <div class="necesidades-grid">
+                    <div class="necesidad-item" draggable="true" data-necesidad="agua">
+                        <img src="../../assets/images/agua.png" alt="Agua">
+                        <span>Agua</span>
+                    </div>
+                    <div class="necesidad-item" draggable="true" data-necesidad="luz">
+                        <img src="../../assets/images/sol.png" alt="Luz solar">
+                        <span>Luz solar</span>
+                    </div>
+                    <div class="necesidad-item" draggable="true" data-necesidad="nutrientes">
+                        <img src="../../assets/images/nutrientes.png" alt="Nutrientes">
+                        <span>Nutrientes</span>
+                    </div>
+                    <div class="necesidad-item" draggable="true" data-necesidad="aire">
+                        <img src="../../assets/images/aire.png" alt="Aire">
+                        <span>Aire</span>
+                    </div>
+                </div>
+                <div class="zonas-clasificacion">
+                    <div class="zona" data-necesidad="agua">
+                        <h4>Agua</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-necesidad="luz">
+                        <h4>Luz solar</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-necesidad="nutrientes">
+                        <h4>Nutrientes</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-necesidad="aire">
+                        <h4>Aire</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="leccion-navegacion">
+                <button class="btn-prev" onclick="window.location.href='leccion2.html'">Lección Anterior</button>
+                <button class="btn-next" onclick="window.location.href='leccion4.html'">Siguiente Lección</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/leccion.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('../../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

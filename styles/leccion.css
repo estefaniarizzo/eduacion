@@ -1,0 +1,520 @@
+/* Contenedor principal */
+.leccion-container {
+    max-width: 1200px;
+    margin: 80px auto 2rem;
+    padding: 0 1rem;
+}
+
+/* Encabezado de la lección */
+.leccion-header {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.leccion-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.leccion-progreso {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.barra-progreso {
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progreso {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Contenido de la lección */
+.leccion-content {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de explicación */
+.explicacion {
+    margin-bottom: 3rem;
+}
+
+.explicacion h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.explicacion p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.explicacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.explicacion li {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.explicacion li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+}
+
+/* Ejercicios */
+.ejercicio {
+    background: #f5f5f5;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.ejercicio h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid de clasificación */
+.clasificacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ser-vivo, .animal {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    cursor: move;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ser-vivo:hover, .animal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ser-vivo img, .animal img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.ser-vivo span, .animal span {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Zonas de clasificación */
+.zonas-clasificacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.zona {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    min-height: 200px;
+    border: 2px dashed #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.zona h4 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.zona-contenido {
+    min-height: 150px;
+}
+
+/* Características */
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.caracteristica-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.caracteristica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.caracteristica-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.caracteristica-card h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.caracteristica-card p {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+}
+
+/* Partes de planta */
+.partes-planta {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.planta-diagrama {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.planta-diagrama img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.parte-planta {
+    position: absolute;
+    cursor: pointer;
+}
+
+.punto {
+    width: 20px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.etiqueta {
+    position: absolute;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+/* Necesidades */
+.necesidades-grid, .necesidades-plantas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.necesidad-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.necesidad-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.necesidad-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.necesidad-item span {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Navegación */
+.leccion-navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-prev, .btn-next {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-prev:disabled {
+    background: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.btn-prev:not(:disabled):hover,
+.btn-next:hover {
+    background: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+/* Ciclo de vida */
+.ciclo-vida-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.etapas-desordenadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.etapa {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: move;
+    transition: all 0.3s ease;
+}
+
+.etapa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.etapa img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.etapa span {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.etapas-ordenadas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.zona-etapa {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 100px;
+    border: 2px dashed #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.zona-etapa h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Diagrama de flor */
+.flor-diagrama {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 2rem auto;
+}
+
+.flor-diagrama img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.parte-flor {
+    position: absolute;
+    cursor: pointer;
+}
+
+.parte-flor .punto {
+    width: 20px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.parte-flor .etiqueta {
+    position: absolute;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+/* Polinización */
+.polinizacion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.polinizadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.polinizador {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: move;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.polinizador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.polinizador img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+.polinizador span {
+    display: block;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.flor-polinizacion {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.flor-polinizacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.zona-polinizacion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leccion-header h1 {
+        font-size: 2rem;
+    }
+
+    .explicacion h2 {
+        font-size: 1.5rem;
+    }
+
+    .clasificacion-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .zonas-clasificacion {
+        grid-template-columns: 1fr;
+    }
+
+    .planta-diagrama {
+        width: 250px;
+        height: 350px;
+    }
+
+    .leccion-navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-prev, .btn-next {
+        width: 100%;
+    }
+
+    .ciclo-vida-container,
+    .polinizacion-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flor-diagrama,
+    .flor-polinizacion {
+        width: 250px;
+        height: 300px;
+    }
+
+    .etapas-desordenadas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 

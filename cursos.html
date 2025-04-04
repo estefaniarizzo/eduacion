@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/cursos.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="cursos-container">
+        <header class="cursos-header">
+            <h1>¡Nuestros Cursos Divertidos!</h1>
+            <div class="filtros">
+                <div class="busqueda">
+                    <input type="text" placeholder="Buscar cursos..." id="buscar-curso">
+                    <button class="btn-buscar">🔍</button>
+                </div>
+                <div class="categorias">
+                    <button class="btn-categoria active" data-categoria="todos">Todos</button>
+                    <button class="btn-categoria" data-categoria="matematicas">Matemáticas</button>
+                    <button class="btn-categoria" data-categoria="ciencias">Ciencias</button>
+                    <button class="btn-categoria" data-categoria="lenguaje">Lenguaje</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="cursos-grid">
+            <!-- Curso: Matemáticas Básicas -->
+            <article class="curso-card" data-categoria="matematicas">
+                <div class="curso-imagen">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Matemáticas Básicas">
+                    <div class="curso-nivel principiante">Principiante</div>
+                </div>
+                <div class="curso-contenido">
+                    <h3>Matemáticas Divertidas</h3>
+                    <div class="curso-stats">
+                        <span>📚 10 Lecciones</span>
+                        <span>⭐ 4.9</span>
+                        <span>👥 1,234</span>
+                    </div>
+                    <p>¡Aprende los fundamentos de las matemáticas de forma divertida!</p>
+                    <div class="curso-progreso">
+                        <div class="barra-progreso">
+                            <div class="progreso" style="width: 60%"></div>
+                        </div>
+                        <span>60% Completado</span>
+                    </div>
+                    <a href="contenido/matematicas/leccion1.html" class="btn">Continuar</a>
+                </div>
+            </article>
+
+            <!-- Curso: Ciencias Naturales -->
+            <article class="curso-card" data-categoria="ciencias">
+                <div class="curso-imagen">
+                    <img src="https://media.istockphoto.com/id/1438895386/es/vector/conjunto-de-icono-de-ciencia-3d-concepto-de-ciencia-y-tecnolog%C3%ADa.jpg?s=2048x2048&w=is&k=20&c=VnTqI1ekBpnhvBQ4t8j44CTlQkGHC2E5FaoUTYBbnj4=" alt="Ciencias Naturales">
+                    <div class="curso-nivel intermedio">Intermedio</div>
+                </div>
+                <div class="curso-contenido">
+                    <h3>Ciencias Naturales</h3>
+                    <div class="curso-stats">
+                        <span>📚 12 Lecciones</span>
+                        <span>⭐ 4.8</span>
+                        <span>👥 987</span>
+                    </div>
+                    <p>¡Explora el fascinante mundo de la naturaleza!</p>
+                    <div class="curso-progreso">
+                        <div class="barra-progreso">
+                            <div class="progreso" style="width: 30%"></div>
+                        </div>
+                        <span>30% Completado</span>
+                    </div>
+                    <a href="contenido/ciencias/leccion1.html" class="btn">Continuar</a>
+                </div>
+            </article>
+
+            <!-- Curso: Lectura y Escritura -->
+            <article class="curso-card" data-categoria="lenguaje">
+                <div class="curso-imagen">
+                    <img src="https://media.istockphoto.com/id/2128519716/photo/a-young-girl-is-reading-a-book-at-a-table.jpg?s=2048x2048&w=is&k=20&c=DzTmcWCped83_AWTsfsbmbbJNyb-XimSajcxJyOQdxA=" alt="Lectura y Escritura">
+                    <div class="curso-nivel principiante">Principiante</div>
+                </div>
+                <div class="curso-contenido">
+                    <h3>Lectura y Escritura</h3>
+                    <div class="curso-stats">
+                        <span>📚 15 Lecciones</span>
+                        <span>⭐ 4.7</span>
+                        <span>👥 756</span>
+                    </div>
+                    <p>¡Aprende a leer y escribir historias increíbles!</p>
+                    <div class="curso-progreso">
+                        <div class="barra-progreso">
+                            <div class="progreso" style="width: 0%"></div>
+                        </div>
+                        <span>0% Completado</span>
+                    </div>
+                    <a href="contenido/lectura/leccion1.html" class="btn">Comenzar</a>
+                </div>
+            </article>
+
+            <!-- Curso: Matemáticas Avanzadas -->
+            <article class="curso-card" data-categoria="matematicas">
+                <div class="curso-imagen">
+                    <img src="https://media.istockphoto.com/id/1413514774/es/foto/pizarra-con-f%C3%B3rmulas-matem%C3%A1ticas-y-c%C3%A1lculos.jpg?s=2048x2048&w=is&k=20&c=kF3kJGZuHbzVlO6J5JycjuoLlg-2viDJLvFyYxh-YAE=" alt="Matemáticas Avanzadas">
+                    <div class="curso-nivel avanzado">Avanzado</div>
+                </div>
+                <div class="curso-contenido">
+                    <h3>Matemáticas Avanzadas</h3>
+                    <div class="curso-stats">
+                        <span>📚 20 Lecciones</span>
+                        <span>⭐ 4.9</span>
+                        <span>👥 432</span>
+                    </div>
+                    <p>¡Domina las matemáticas con ejercicios desafiantes!</p>
+                    <div class="curso-progreso bloqueado">
+                        <div class="barra-progreso">
+                            <div class="progreso" style="width: 0%"></div>
+                        </div>
+                        <span>Bloqueado</span>
+                    </div>
+                    <a href="#" class="btn disabled">Completar nivel anterior</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cursos.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

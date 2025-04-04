@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Animales - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/leccion.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="leccion-container">
+        <div class="leccion-header">
+            <h1>Los Animales</h1>
+            <div class="leccion-progreso">
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 0%"></div>
+                </div>
+                <span>0% Completado</span>
+            </div>
+        </div>
+
+        <div class="leccion-content">
+            <section class="explicacion">
+                <h2>¿Qué son los animales?</h2>
+                <p>Los animales son seres vivos que pueden moverse por sí mismos. Se clasifican en dos grandes grupos:</p>
+                <ul>
+                    <li>Vertebrados: Tienen columna vertebral (mamíferos, aves, reptiles, anfibios y peces)</li>
+                    <li>Invertebrados: No tienen columna vertebral (insectos, arañas, moluscos, etc.)</li>
+                </ul>
+            </section>
+
+            <section class="ejercicio" id="ejercicio1">
+                <h3>Ejercicio 1: Clasifica los animales</h3>
+                <div class="clasificacion-grid">
+                    <div class="animal" draggable="true" data-tipo="vertebrado">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Perro">
+                        <span>Perro</span>
+                    </div>
+                    <div class="animal" draggable="true" data-tipo="invertebrado">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Mariposa">
+                        <span>Mariposa</span>
+                    </div>
+                    <div class="animal" draggable="true" data-tipo="vertebrado">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998588.png" alt="Pez">
+                        <span>Pez</span>
+                    </div>
+                    <div class="animal" draggable="true" data-tipo="invertebrado">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998584.png" alt="Caracol">
+                        <span>Caracol</span>
+                    </div>
+                </div>
+                <div class="zonas-clasificacion">
+                    <div class="zona" data-tipo="vertebrado">
+                        <h4>Vertebrados</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-tipo="invertebrado">
+                        <h4>Invertebrados</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio2">
+                <h3>Ejercicio 2: Hábitats de los animales</h3>
+                <div class="habitats-grid">
+                    <div class="habitat-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Tierra">
+                        <h4>Tierra</h4>
+                        <p>Animales terrestres</p>
+                    </div>
+                    <div class="habitat-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Agua">
+                        <h4>Agua</h4>
+                        <p>Animales acuáticos</p>
+                    </div>
+                    <div class="habitat-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Aire">
+                        <h4>Aire</h4>
+                        <p>Animales voladores</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio3">
+                <h3>Ejercicio 3: ¿Qué comen los animales?</h3>
+                <div class="alimentacion-grid">
+                    <div class="alimentacion-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Carnívoro">
+                        <span>Carnívoros</span>
+                    </div>
+                    <div class="alimentacion-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Herbívoro">
+                        <span>Herbívoros</span>
+                    </div>
+                    <div class="alimentacion-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Omnívoro">
+                        <span>Omnívoros</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="leccion-navegacion">
+            <button class="btn btn-prev">Anterior</button>
+            <button class="btn btn-next">Siguiente</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/leccion.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('../../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,90 @@
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a href="/">
+            <img src="https://cdn.pixabay.com/photo/2019/02/05/07/52/idea-3976295_640.png" alt="EduKids Logo" class="logo">
+        </a>
+    </div>
+
+    <div class="navbar-links">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/cursos.html" class="nav-link">Cursos</a>
+        <a href="/juegos.html" class="nav-link">Juegos</a>
+        <a href="/actividades.html" class="nav-link">Actividades</a>
+        <a href="/logros.html" class="nav-link">Logros</a>
+    </div>
+
+    <div class="navbar-auth">
+        <div id="usuario-autenticado" style="display: none;">
+            <div class="usuario-menu">
+                <img src="/assets/images/avatar-default.png" alt="Avatar" class="avatar-mini">
+                <span id="nombre-usuario-nav"></span>
+                <div class="menu-desplegable">
+                    <a href="/perfil.html">Mi Perfil</a>
+                    <a href="#" id="btn-cerrar-sesion">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+        <div id="usuario-no-autenticado">
+            <a href="/login.html" class="btn-login">Iniciar Sesión</a>
+            <a href="/registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+
+    <!-- Botón de menú móvil -->
+    <button class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<script>
+    // Manejar menú móvil
+    document.querySelector('.navbar-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar-menu').classList.toggle('active');
+        document.querySelector('.navbar-auth').classList.toggle('active');
+    });
+
+    // Manejar menú desplegable de usuario
+    const userMenu = document.querySelector('.user-info');
+    if (userMenu) {
+        userMenu.addEventListener('click', function() {
+            document.querySelector('.dropdown-menu').classList.toggle('active');
+        });
+    }
+
+    // Actualizar UI según el estado de autenticación
+    function actualizarUIAuth() {
+        const authButtons = document.getElementById('auth-buttons');
+        const userMenu = document.getElementById('user-menu');
+        const userNameElement = document.querySelector('.user-name');
+        
+        const isLoggedIn = !!(localStorage.getItem('userToken') || sessionStorage.getItem('userToken'));
+        const userName = localStorage.getItem('userName') || sessionStorage.getItem('userName');
+
+        if (isLoggedIn && userName) {
+            authButtons.style.display = 'none';
+            userMenu.style.display = 'block';
+            userNameElement.textContent = userName;
+        } else {
+            authButtons.style.display = 'flex';
+            userMenu.style.display = 'none';
+        }
+    }
+
+    // Actualizar UI al cargar la página
+    document.addEventListener('DOMContentLoaded', actualizarUIAuth);
+
+    // Cerrar menú desplegable al hacer clic fuera
+    document.addEventListener('click', function(e) {
+        const dropdown = document.querySelector('.dropdown-menu');
+        const userInfo = document.querySelector('.user-info');
+        
+        if (dropdown && dropdown.classList.contains('active')) {
+            if (!dropdown.contains(e.target) && !userInfo.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        }
+    });
+</script> 

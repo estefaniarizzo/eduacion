@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Seres Vivos - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/navbar.css">
+    <link rel="stylesheet" href="../../styles/leccion.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="leccion-container">
+        <div class="leccion-header">
+            <h1>Los Seres Vivos</h1>
+            <div class="leccion-progreso">
+                <div class="barra-progreso">
+                    <div class="progreso" style="width: 0%"></div>
+                </div>
+                <span>0% Completado</span>
+            </div>
+        </div>
+
+        <div class="leccion-content">
+            <section class="explicacion">
+                <h2>¿Qué son los seres vivos?</h2>
+                <p>Los seres vivos son todos aquellos organismos que tienen vida. Algunas características que comparten son:</p>
+                <ul>
+                    <li>Nacen, crecen, se reproducen y mueren</li>
+                    <li>Necesitan agua y alimento para vivir</li>
+                    <li>Responden a cambios en su entorno</li>
+                    <li>Se adaptan al medio donde viven</li>
+                </ul>
+            </section>
+
+            <section class="ejercicio" id="ejercicio1">
+                <h3>Ejercicio 1: Clasifica los seres vivos</h3>
+                <div class="clasificacion-grid">
+                    <div class="ser-vivo" draggable="true" data-tipo="animal">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Perro">
+                        <span>Perro</span>
+                    </div>
+                    <div class="ser-vivo" draggable="true" data-tipo="planta">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Árbol">
+                        <span>Árbol</span>
+                    </div>
+                    <div class="ser-vivo" draggable="true" data-tipo="animal">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Pájaro">
+                        <span>Pájaro</span>
+                    </div>
+                    <div class="ser-vivo" draggable="true" data-tipo="planta">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998590.png" alt="Flor">
+                        <span>Flor</span>
+                    </div>
+                </div>
+                <div class="zonas-clasificacion">
+                    <div class="zona" data-tipo="animal">
+                        <h4>Animales</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                    <div class="zona" data-tipo="planta">
+                        <h4>Plantas</h4>
+                        <div class="zona-contenido"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio2">
+                <h3>Ejercicio 2: Características de los seres vivos</h3>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Nacimiento">
+                        <h4>Nacimiento</h4>
+                        <p>Los seres vivos nacen de sus padres</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Crecimiento">
+                        <h4>Crecimiento</h4>
+                        <p>Los seres vivos crecen y cambian</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Reproducción">
+                        <h4>Reproducción</h4>
+                        <p>Los seres vivos pueden tener hijos</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998590.png" alt="Muerte">
+                        <h4>Muerte</h4>
+                        <p>Los seres vivos mueren</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ejercicio" id="ejercicio3">
+                <h3>Ejercicio 3: ¿Qué necesitan los seres vivos?</h3>
+                <div class="necesidades-grid">
+                    <div class="necesidad-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png" alt="Agua">
+                        <span>Agua</span>
+                    </div>
+                    <div class="necesidad-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998592.png" alt="Alimento">
+                        <span>Alimento</span>
+                    </div>
+                    <div class="necesidad-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998586.png" alt="Aire">
+                        <span>Aire</span>
+                    </div>
+                    <div class="necesidad-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1998/1998590.png" alt="Luz">
+                        <span>Luz</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="leccion-navegacion">
+            <button class="btn btn-prev" disabled>Anterior</button>
+            <button class="btn btn-next">Siguiente</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/leccion.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('../../components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

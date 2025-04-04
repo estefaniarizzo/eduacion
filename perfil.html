@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - EduKids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/perfil.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <main class="perfil-container">
+        <header class="perfil-header">
+            <div class="perfil-info">
+                <div class="avatar">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/01/12/11/avatar-1300582_640.png" alt="Avatar del usuario" id="avatar-usuario">
+                </div>
+                <div class="info-usuario">
+                    <h1 id="nombre-usuario">Cargando...</h1>
+                    <p id="email-usuario">Cargando...</p>
+                    <p id="grado-usuario">Cargando...</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="perfil-content">
+            <section class="estadisticas">
+                <h2>Mis Estadísticas</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3>Lecciones Completadas</h3>
+                            <p id="lecciones-completadas">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3>Objetivos Alcanzados</h3>
+                            <p id="objetivos-alcanzados">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <h3>Puntos Totales</h3>
+                            <p id="puntos-totales">0</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progreso-cursos">
+                <h2>Progreso en Cursos</h2>
+                <div class="cursos-grid">
+                    <div class="curso-card">
+                        <h3>Matemáticas</h3>
+                        <div class="progreso-bar">
+                            <div class="progreso" style="width: 0%"></div>
+                        </div>
+                        <p>0% completado</p>
+                    </div>
+                    <div class="curso-card">
+                        <h3>Ciencias Naturales</h3>
+                        <div class="progreso-bar">
+                            <div class="progreso" style="width: 0%"></div>
+                        </div>
+                        <p>0% completado</p>
+                    </div>
+                    <div class="curso-card">
+                        <h3>Lectura y Escritura</h3>
+                        <div class="progreso-bar">
+                            <div class="progreso" style="width: 0%"></div>
+                        </div>
+                        <p>0% completado</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="configuracion">
+                <h2>Configuración de Cuenta</h2>
+                <form id="form-configuracion" class="config-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="grado">Grado</label>
+                        <select id="grado" name="grado" required>
+                            <option value="1">Primer Grado</option>
+                            <option value="2">Segundo Grado</option>
+                            <option value="3">Tercer Grado</option>
+                            <option value="4">Cuarto Grado</option>
+                            <option value="5">Quinto Grado</option>
+                            <option value="6">Sexto Grado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Nueva Contraseña</label>
+                        <input type="password" id="password" name="password">
+                        <small>Deja en blanco para mantener la contraseña actual</small>
+                    </div>
+                    <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- El contenido del footer se cargará dinámicamente -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/perfil.js"></script>
+    <script>
+        // Cargar navbar y footer
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html> 

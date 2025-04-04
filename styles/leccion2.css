@@ -1,0 +1,219 @@
+/* Estilos para la explicación */
+.explicacion {
+    background: var(--background-light);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.explicacion p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Ejemplo de suma con manzanas */
+.ejemplo-suma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.manzanas-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.grupo-manzanas {
+    display: flex;
+    gap: 0.5rem;
+    min-width: 80px;
+    justify-content: center;
+}
+
+.manzana {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.manzana:hover {
+    transform: scale(1.1);
+}
+
+.operador {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.suma-numerica {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.suma-numerica span {
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Ejercicio 1: Suma con objetos */
+.objetos-suma {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.suma-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.resultado-input {
+    width: 80px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    outline: none;
+}
+
+.resultado-input:focus {
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Ejercicio 2: Encuentra el número faltante */
+.suma-incompleta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.numero-faltante {
+    width: 80px;
+    height: 80px;
+    border: 3px dashed var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-light);
+}
+
+/* Ejercicio 3: Suma rápida */
+.temporizador {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.suma-rapida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.opciones-rapidas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.opcion-rapida {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.opcion-rapida:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.puntuacion {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titilar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.temporizador.urgente {
+    color: #f44336;
+    animation: titilar 1s infinite;
+}
+
+.objeto-animado {
+    animation: aparecer 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .manzanas-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .suma-numerica {
+        font-size: 1.5rem;
+    }
+
+    .suma-input,
+    .suma-incompleta,
+    .suma-rapida {
+        font-size: 1.8rem;
+    }
+
+    .resultado-input {
+        width: 60px;
+        height: 40px;
+        font-size: 1.8rem;
+    }
+
+    .opciones-rapidas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
